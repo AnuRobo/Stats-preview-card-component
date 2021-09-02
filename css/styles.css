@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white0: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white1: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--Very-dark-blue);
+    min-height: 100vh;
+    font-size: 15px;
+    font-family: 'Inter',sans-serif;
+    color: var(--White);
+    padding: 3em 2em;
+}
+
+.card{
+    border-radius: 10px;
+    background:var(--Dark-desaturated-blue);
+}
+.card-content{
+    padding: 1.2em 2em;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+/*=========================*/
+/*--------TypoGraphy-------*/
+/*=========================*/
+.card-image1{
+    border-radius: 10px 10px 0 0;
+    max-width: 100%;
+}
+.card-image{
+    position: relative;
+}
+.card-image::after{
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: var(--Soft-violet);
+    opacity: 0.6;
+}
+.card-image2{
+    display: none;
+}
+.card-content-main-para{
+    font-size: 1rem;
+    line-height: 1.8;
+    font-family: "Lexend Deca",sans-serif;
+    margin: 0 0 2.4em;
+    color: var(--Slightly-transparent-white0);
+}
+.card-stat-info-para{
+    font-weight: 200;
+    font-size: .8rem;
+    margin-bottom: 3em;
+    color: var(--Slightly-transparent-white1);
+    font-family: "Lexend Deca",sans-serif;
+}
+h1{
+    font-size: 2rem;
+}
+span{
+    color: var(--Soft-violet);
+}
+h2{
+    margin: 0;
+}
+
+
+@media (min-width:576px){
+    body{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width: 80vw;
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 10px 0 0 10px;
+    }
+    .card-image1{
+        display: none;
+    }
+    .card-image{
+        width: 50%;
+    }
+    .card-image2{
+        width: 100%;
+        height: 100%;
+        display: initial;
+        border-radius: 0 10px 10px 0;
+    }
+    .card-content{
+        width: 50%;
+        padding: 0 0 0 4em;
+        text-align: unset;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .card-stat,.card-content-main-para{
+        width: 30vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    h1{
+        width: 35vw;
+        font-size: 2.6rem;
+    }
+}
